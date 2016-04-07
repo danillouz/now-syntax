@@ -1,0 +1,17 @@
+{
+  "name": "now-syntax",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "author": "Daniel Illouz",
+  "description": "Minimalistic dark syntax theme inspired by the zeit now website.",
+  "keywords": [
+    "syntax",
+    "theme",
+    "dark"
+  ],
+  "repository": "https://github.com/danillouz/now-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

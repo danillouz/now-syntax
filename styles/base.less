@@ -1,0 +1,451 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @white;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+  color: @dark-grey;
+}
+
+.keyword {
+  color: @yellow;
+
+  &.control {
+    color: @yellow;
+  }
+
+  &.operator {
+    color: @white;
+  }
+
+  &.css {
+    &.operator.logic {
+      color: @blue;
+    }
+  }
+
+  &.other.special-method {
+    color: @blue;
+  }
+
+  &.other.unit {
+    color: @yellow;
+  }
+}
+
+.storage {
+  color: @white;
+
+  &.modifier {
+	color: @blue;
+	font-style: italic;
+  }
+
+  &.arrow {
+    &.js {
+	  color: @red;
+	}
+  }
+
+  &.js {
+    &.type {
+      &.function {
+        color: @yellow;
+        font-style: italic;
+      }
+      &.var {
+        color: @blue;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.text {
+  &.html {
+    &.basic {
+      color: @white;
+    }
+  }
+}
+
+.constant {
+  color: @red;
+
+  &.character.escape {
+    color: @white;
+  }
+
+  &.character {
+    color: @yellow;
+  }
+
+  &.numeric {
+    color: @yellow;
+  }
+
+  &.other.color {
+    color: @yellow;
+  }
+
+  &.other.symbol {
+    color: @green;
+  }
+
+  &.js {
+    &.boolean {
+      color: @yellow;
+    }
+  }
+}
+
+.variable {
+  color: @grey;
+
+  &.interpolation {
+    color: @red;
+  }
+
+  &.parameter {
+    &.js {
+      color: @blue;
+      font-style: italic;
+    }
+    &.css {
+      color: @yellow;
+    }
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @green;
+
+  &.quoted.js {
+    color: @green;
+  }
+
+  &.regexp {
+    color: @yellow;
+
+    .source.ruby.embedded {
+      color: @yellow;
+    }
+  }
+
+  &.other.link {
+    color: @blue;
+  }
+}
+
+.punctuation {
+  &.css {
+    &.property-list {
+      color: @grey;
+    }
+    &.separator {
+      color: @white;
+    }
+    &.terminator {
+      color: @white;
+    }
+  }
+  &.definition {
+    &.css {
+      &.constant {
+        color: @yellow;
+      }
+    }
+    &.tag {
+      color: @white;
+      font-weight: bold;
+    }
+    &.comment {
+      color: @dark-grey;
+    }
+
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.string {
+      color: @green;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
+  }
+
+  &.section {
+    &.css {
+      &.function {
+        color: @grey;
+      }
+    }
+  }
+
+  &.section.embedded {
+    color: @red;
+  }
+}
+
+.support {
+  &.class {
+    color: @blue;
+    font-style: italic;
+  }
+
+  &.function  {
+    &.js {
+      color: @white;
+    }
+
+    &.any-method {
+      color: @blue;
+    }
+  }
+  &.css {
+    &.property-name {
+      color: @grey;
+      font-style: italic;
+      font-weight: bold;
+    }
+    &.constant {
+      color: @blue;
+    }
+    &.function.misc {
+      color: @blue;
+    }
+  }
+}
+
+.entity {
+  &.js {
+    &.instance.name.type {
+      color: @blue;
+      font-style: italic;
+    }
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @green;
+  }
+
+  &.name.section {
+    color: @blue;
+  }
+
+  &.name.function {
+    color: @white;
+  }
+
+  &.html {
+    &.name.tag {
+      color: @blue;
+      font-weight: bold;
+    }
+    &.other.attribute-name {
+      color: @red;
+    }
+  }
+
+  &.css {
+    &.name.tag {
+      color: @grey;
+    }
+  }
+
+  &.other.attribute-name {
+    color: @red;
+
+    &.id {
+      color: @green;
+    }
+  }
+}
+
+.meta {
+  &.css {
+    &.property-value {
+      color: @grey;
+    }
+  }
+
+  &.html {
+    &.tag {
+      color: @grey;
+    }
+  }
+
+  &.class {
+    color: @green;
+  }
+
+  &.link {
+    color: @yellow;
+  }
+
+  &.require {
+    color: @blue;
+  }
+
+  &.selector {
+    color: @yellow;
+  }
+
+  &.separator {
+    background-color: @grey;
+    color: @syntax-text-color;
+  }
+
+  &.delimiter {
+    color: @white;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @yellow;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @red;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @red;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @yellow;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @green;
+  }
+}
+
+.js {
+  color: @grey;
+}
+.js.comment {
+  color: @dark-grey;
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
+
+.meta > .storage.type + .entity.name {
+  color: @white;
+  font-weight: bolder;
+}
