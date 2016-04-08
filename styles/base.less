@@ -1,5 +1,59 @@
 @import "syntax-variables";
 
+.list-tree li:not(.list-nested-item):not(.tabBlender).selected::before {
+  background-color: #1f1f1f;
+}
+
+atom-panel.modal {
+  border: 2px solid #000;
+  background-color: @black;
+}
+
+atom-panel.modal .select-list ol.list-group {
+  background-color: @black;
+}
+
+atom-panel.modal .select-list ol.list-group li.selected span {
+  color: @white;
+}
+
+atom-panel.modal .select-list ol.list-group li.selected {
+  color: @white;
+}
+
+.selected kbd {
+  background: @white;
+  color: #000;
+}
+
+.find-and-replace,
+.project-find {
+  background-color: @black;
+}
+
+.find-and-replace .options-label .options,
+.project-find .options-label .options {
+  color: @white;
+}
+
+.find-and-replace .description,
+.project-find .description {
+  color: @white;
+}
+
+.find-and-replace .description .subtle-info-message .highlight,
+.project-find .description .subtle-info-message .highlight {
+  color: @white;
+}
+
+.find-and-replace .find-meta-container .result-counter {
+  color: @white;
+}
+
+atom-text-editor::shadow .highlight.find-result .region {
+  border-color: @magenta;
+}
+
 atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
@@ -270,6 +324,12 @@ atom-text-editor .search-results .marker.current-result .region,
     font-style: italic;
   }
 
+  &.constant  {
+    &.js {
+      color: @white;
+    }
+  }
+
   &.function  {
     &.js {
       color: @white;
@@ -379,6 +439,18 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.delimiter {
     color: @white;
+  }
+
+  &.brace.curly {
+    &.js {
+	  color: @white;
+	}
+  }
+
+  &.brace.square {
+    &.js {
+	  color: @white;
+	}
   }
 }
 
