@@ -20,3 +20,8 @@
 ![now-md](https://raw.githubusercontent.com/danillouz/now-syntax/master/screenshots/now-md.png "now-syntax markdown")
 
 > The theme in the screenshots is [atom-material-ui](https://atom.io/themes/atom-material-ui).
+
+### Alternative UI
+Also looks good (bit more quiet) with [nucleus-dark-ui](https://atom.io/themes/nucleus-dark-ui).
+
+![quiet](https://raw.githubusercontent.com/danillouz/now-syntax/master/screenshots/quiet.png "quiet")
