@@ -244,6 +244,19 @@ atom-text-editor .search-results .marker.current-result .region,
     .source.ruby.embedded {
       color: @yellow;
     }
+
+	.anchor {
+		color: @blue;
+	}
+
+	.constant {
+		color: @red;
+	}
+
+	.punctuation.definition.string.begin,
+	.punctuation.definition.string.end {
+	  color: @purple;
+	}
   }
 
   &.other.link {
@@ -492,12 +505,40 @@ atom-text-editor .search-results .marker.current-result .region,
   &.raw.inline {
     color: @green;
   }
+
+  &.underline.link.gfm {
+    color: @blue;
+  }
 }
 
 .source.gfm .markup {
   -webkit-font-smoothing: auto;
   &.heading {
     color: @green;
+  }
+}
+
+.source.gfm .variable.ordered.list.gfm,
+.source.gfm .variable.unordered.list.gfm {
+  color: @red;
+}
+
+.source.gfm .support.gfm,
+.source.gfm .markup.raw.gfm {
+  color: @purple;
+}
+
+.source.gfm .link .entity.gfm {
+  font-style: italic;
+}
+
+.source.gfm .link .punctuation {
+  &.definition.begin.gfm {
+    color: @blue;
+  }
+
+  &.definition.end.gfm {
+    color: @blue;
   }
 }
 
