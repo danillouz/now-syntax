@@ -1,7 +1,7 @@
 {
   "name": "now-syntax",
   "theme": "syntax",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Daniel Illouz",
   "description": "Minimalistic dark syntax theme inspired by the zeit now website.",
   "keywords": [
