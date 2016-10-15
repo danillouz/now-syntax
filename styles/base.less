@@ -145,15 +145,16 @@ atom-text-editor .search-results .marker.current-result .region,
 .storage {
   color: @white;
 
+  &.type {
+	&.js {
+	  color: @blue;
+	  font-style: italic;
+    }
+  }
+
   &.modifier {
 	color: @blue;
 	font-style: italic;
-  }
-
-  &.arrow {
-    &.js {
-	  color: @red;
-	}
   }
 
   &.js {
@@ -166,8 +167,56 @@ atom-text-editor .search-results .marker.current-result .region,
         color: @blue;
         font-style: italic;
       }
+	  &.variable {
+        color: @blue;
+        font-style: italic;
+      }
     }
   }
+}
+
+.punctuation.quasi.element.js {
+  color: @red;
+  font-weight: bolder;
+}
+
+.storage.type.function.arrow.js {
+  color: @red;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.function.arrow.js .name.function {
+  color: @grey;
+}
+
+.source.js.jsx .entity.other.attribute-name {
+  font-style: normal!important;
+}
+
+.punctuation.section.embedded.jsx {
+  color: @red;
+  font-weight: bolder;
+}
+
+.keyword.operator.spread.js {
+  color: @red;
+  font-weight: bolder;
+}
+
+.keyword.control.module.js {
+  color: @purple;
+}
+
+.support.class.component.jsx {
+  color: @blue;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.entity.name.tag.jsx {
+  color: @blue;
+  font-weight: bold;
 }
 
 .text {
@@ -179,8 +228,6 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .constant {
-  color: @red;
-
   &.character.escape {
     color: @white;
   }
@@ -190,7 +237,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.numeric {
-    color: @yellow;
+    color: @magenta;
   }
 
   &.other.color {
@@ -208,11 +255,22 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
+.string.unquoted.js {
+  color: @grey;
+}
+
 .variable {
   color: @grey;
 
   &.interpolation {
     color: @red;
+	font-weight: bolder;
+  }
+
+  &.other {
+    &.js {
+      color: @grey;
+    }
   }
 
   &.parameter {
@@ -372,11 +430,12 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.inherited-class {
-    color: @green;
+    color: @white;
   }
 
   &.name.class, &.name.type.class {
-    color: @green;
+    color: @white;
+	font-weight: bold;
   }
 
   &.name.section {
@@ -393,6 +452,9 @@ atom-text-editor .search-results .marker.current-result .region,
       font-weight: bold;
     }
     &.other.attribute-name {
+      color: @red;
+    }
+	&.other.attribute-name.id {
       color: @red;
     }
   }
@@ -426,7 +488,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.class {
-    color: @green;
+    color: @white;
   }
 
   &.link {
@@ -540,13 +602,6 @@ atom-text-editor .search-results .marker.current-result .region,
   &.definition.end.gfm {
     color: @blue;
   }
-}
-
-.js {
-  color: @grey;
-}
-.js.comment {
-  color: @dark-grey;
 }
 
 atom-text-editor[mini] .scroll-view,
